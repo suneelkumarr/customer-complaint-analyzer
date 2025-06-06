@@ -1,0 +1,90 @@
+🧪 Starting API tests...
+
+✅ Health check passed: OK
+📝 Testing: Refund Complaint
+Message: "I've been waiting 3 days for my refund and your support hasn't replied. This is really frustrating."
+✅ Response: {
+  summary: 'Customer is frustrated with the lack of refund and unresponsive support after waiting 3 days',
+  category: 'Refund Issue',
+  urgency: 'High',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Shipping Delay
+Message: "My order was supposed to arrive yesterday but it's still not here. Can you please check the status?"
+✅ Response: {
+  summary: "Customer's order has not arrived as expected, delivery was supposed to be completed yesterday",
+  category: 'Shipping',
+  urgency: 'Medium',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Account Access Issue
+Message: "I can't log into my account anymore. I keep getting an error message saying my credentials are invalid."
+✅ Response: {
+  summary: 'Customer is unable to log into their account and receives an invalid credentials error message',
+  category: 'Account Access',
+  urgency: 'Medium',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Positive Feedback
+Message: "Thank you for the excellent customer service! The representative was very helpful and resolved my issue quickly."
+✅ Response: {
+  summary: 'Customer expressed satisfaction with the helpfulness and efficiency of the customer service representative.',
+  category: 'Service Quality',
+  urgency: 'Low',
+  sentiment: 'Positive'
+}
+---
+📝 Testing: Billing Inquiry
+Message: "I noticed an extra charge on my credit card statement. Could you please explain what this is for?"
+✅ Response: {
+  summary: 'Customer noticed an unexpected charge on their credit card statement and is seeking an explanation.',
+  category: 'Billing',
+  urgency: 'Medium',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Technical Support Request
+Message: "The app keeps crashing when I try to upload a photo. Please fix this issue as soon as possible."
+✅ Response: {
+  summary: 'The mobile app is crashing when attempting to upload a photo, preventing the user from completing the action.',
+  category: 'Technical Support',
+  urgency: 'High',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Product Quality Complaint
+Message: "The product arrived damaged and doesn't match the description. I'm very disappointed."
+✅ Response: {
+  summary: "The customer received a damaged product that doesn't match the description, expressing disappointment.",
+  category: 'Product Issue',
+  urgency: 'Medium',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Service Quality Feedback
+Message: "Your delivery driver was rude and threw the package at my doorstep. That's unacceptable."
+✅ Response: {
+  summary: 'Customer is upset because the delivery driver was rude and threw the package at their doorstep.',
+  category: 'Shipping',
+  urgency: 'Medium',
+  sentiment: 'Negative'
+}
+---
+📝 Testing: Invalid Input - Empty Message
+Message: ""
+❌ Test failed: { error: 'Validation error', message: 'Message field is required' }
+---
+📝 Testing: Long Message Test
+Message: "This is just a long message that doesn't have any specific complaint, but should be handled gracefully by the system. It might mention several unrelated things like the weather, shipping, and maybe even praise the customer service team briefly. Let's see how the model handles this."
+✅ Response: {
+  summary: 'The customer message contains no specific complaint but tests how the system handles unrelated content and brief praise for customer service.',
+  category: 'Other',
+  urgency: 'Low',
+  sentiment: 'Neutral'
+}
+---
+🧪 Testing validation...
+✅ Validation test passed: Message field is required
